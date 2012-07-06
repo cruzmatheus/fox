@@ -1,0 +1,26 @@
+<% @users = User.all %>
+<table border="0" cellspacing="5" cellpadding="5">
+	<tr>
+		<th>Nome</th>
+		<th>Email</th>
+		<th>Ativado</th>
+		<th>Opcoes</th>
+	</tr>
+		<% @users.each do |i| %>
+		<tr>
+			<td><%= i.name %></td>
+			<td><%= i.email %></td>
+			<td><%= i.active %></td>
+			<% @user =  User.find_by_email(i.email) %>
+			
+			<% if !@user.nil? %>
+				<% if @user.active %>
+					<td><%= link_to 'Desativar', :controller => :users, :action => :deactivate, :user => i %></td>
+				<% else %>
+					<td><%= link_to 'Ativar', :controller => :users, :action => :activate, :user => i %></td>
+				<% end %>
+			<% end %>
+			
+		</tr>
+		<% end %>
+</table>

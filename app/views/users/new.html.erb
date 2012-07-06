@@ -1,0 +1,15 @@
+<h1>Users#new</h1>
+<%= form_for @user do |f| %>
+<table border="0" cellspacing="5" cellpadding="5">
+	<tr>
+		<td><%= f.label :name, "Nome" %></td>
+		<td><%= f.text_field :name %></td>
+	</tr>
+	<tr>
+		<td><%= f.label :email, "Email" %></td>
+		<td><%= f.text_field :email %></td>
+	</tr>
+</table>
+
+	<%= f.submit 'Salvar' %>
+<% end %>
