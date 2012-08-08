@@ -1,0 +1,39 @@
+<h1>Cadastro de questões</h1>
+
+<%= nested_form_for @question do |f| %>
+	<div>
+		<%= f.label :enunciation, "Enunciado" %>
+		<%= f.text_field :enunciation %>
+	</div>
+	
+	<div>
+		<%= f.label :objective, "Objetiva" %>
+		<%= f.check_box :objective %>
+	</div>
+	
+	<h3>Cadastro de alternativas</h3>
+	<%= f.link_to_add 'Adicionar alternativa', :answers %>
+
+	<%= f.fields_for :answers do |builder| %>
+		<div class="answers_div">
+				<table border="0" cellspacing="5" cellpadding="5">
+					<tr>
+						<td><%= builder.label :body, 'Corpo', :class => 'body_label' %><br />
+						<%= builder.text_field :body, :class => 'body_field' %><br /></td>
+
+						<td>
+						<%= builder.label :correct, 'Verdadeira', :class => 'correct_label' %><br />
+						<%= builder.check_box :correct, :class => 'correct_field' %><br />
+						</td>
+						
+						<td><%= builder.link_to_remove 'Remover campos' %></td>
+					</tr>
+				</table>
+		</div>
+		
+	<% end %>
+	
+	<div style="margin-top: 10px;">
+		<%= f.submit 'Cadastrar' %>
+	</div>
+<% end %>
