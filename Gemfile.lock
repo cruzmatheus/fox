@@ -1,9 +1,3 @@
-GIT
-  remote: git://github.com/ryanb/nested_form.git
-  revision: 59d9c367785b76a8052162a65f31dbaf04191dcd
-  specs:
-    nested_form (0.2.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -112,7 +106,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   json
-  nested_form!
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
   sqlite3
