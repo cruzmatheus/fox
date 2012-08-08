@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'json'
 
+gem "nested_form", :git => "git://github.com/ryanb/nested_form.git"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
