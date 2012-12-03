@@ -19,7 +19,8 @@ class InvitesController < ApplicationController
       render :action => :send_invites
     elsif UserMailer.invitation(invite, @encrypted_word).deliver
       self.create
-    else 
+    else
+      flash[:notice] = "Não foi possível enviar o covite. Tente novamente mais tarde."
       render :action => :send_invites
     end
   end

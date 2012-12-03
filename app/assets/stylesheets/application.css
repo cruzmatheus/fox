@@ -11,3 +11,51 @@
  *= require_self
  *= require_tree .
  */
+
+#logo{
+	background-color: black;
+	width: 200px ;
+	height:100px ;
+	margin-right: 50px;
+	
+}
+
+#head2{
+	margin-right:50px;
+	margin-left:50px;
+}
+
+#li-link{
+	margin-right: 50px;
+}
+
+#menu-link{
+	margin-top: 27px;
+}
+
+#text-title{
+font-size:18px;
+margin-left:5px;	
+}
+
+#bottom{
+	margin-left:50px;
+}
+
+#social-link{
+	float: left;
+	background-color: black;
+	height: 25px;
+	width:25px; 
+	margin-right:10px;
+}
+
+#clear{
+	clear:both;
+}
+
+#bodyzin{
+	margin-right:70px;
+	margin-left:70px;
+	margin-top:35px;
+}

@@ -5,12 +5,60 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application", "nested_form" %>
   <%= csrf_meta_tags %>
+
+
+
 </head>
+
+
 <body>
+	<div id="head2">
+	<div class="span4" id="logo">
 
-<p><%= flash[:notice] %></p>
+	</div>
 
-<%= yield %>
+	<div class="span8">
+
+		<ul id="menu-link" class="nav nav-pills">
+		  <li id="li-link" class="active" style ="margin-left:50px;">
+		    <a  href="#">Atividades</a>
+		  </li>
+		  <li id="li-link"><a  href="#">Entrar</a></li>
+
+		 <li id="li-link"><a href="#">Sobre</a></li>
+		  <!-- <li id="li-link"><a href="#">Mauricio Carvalho de Freitas</a></li>
+		<li id="li-link"><a href="">Sair</a></li>
+-->
+		</ul>
+	</div>
+	</div>
+<div id="clear"></div>
+<div class="well" id="bodyzin">
+	<p><%= flash[:notice] %></p>
+
+	<%= yield %>
+	
+</div>
+
+<div id="bottom">
+<div class="span6">
+	<div id="text-title">Sobre</div>
+	<div style="font-size:11px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in libero lorem, in molestie orci. Fusce at eros nisl, sit amet laoreet erat. Morbi porta odio ut ligula vehicula viverra. Donec quis magna dictum mauris rutrum condimentum. Mauris sit amet metus metus, ac mattis elit. Phasellus adipiscing eros ut nisl adipiscing at rutrum felis viverra. Integer dapibus rhoncus augue ac fringilla. Etiam in ligula dui, nec semper quam.</div>
+	
+</div>
+<div class="span6">
+	<div id="text-title" style="margin-left: 200px;">Rede Sociais<div>
+		<div style="margin-top:10px;">
+		<a href="#"><div id="social-link"></div></a>
+		<a href="#"><div id="social-link"></div></a>
+		<a href="#"><div id="social-link"></div></a>
+		<a href="#"><div id="social-link"></div></a>
+		</div>
+			
+			
+	</div>
+</div>
 
 </body>
+
 </html>
